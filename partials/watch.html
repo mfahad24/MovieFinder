@@ -1,0 +1,19 @@
+<!-- Displays the new details API object return  -->
+<div class="whitebox">
+<div id="formdiv">
+    <p id="watchTitle"> {{ $ctrl.movie.title }}</p>
+    <p class="movieInfo"> Released: {{ $ctrl.movie.release_date.slice(0,4) }}</p>
+    <p class="movieInfo"> Runtime: {{ $ctrl.movie.runtime}} minutes</p>
+    <p class="movieInfo"> Synopsis: {{ $ctrl.movie.overview }}</p>
+    <p class="movieInfo"> Director: {{ $ctrl.movie.credits.crew[0].name }} </p>
+    <p class="movieInfo"> Starring: {{ $ctrl.movie.credits.cast[0].name }}, {{$ctrl.movie.credits.cast[1].name}}, & {{$ctrl.movie.credits.cast[2].name}}
+        <p>
+            <a href="http://imdb.com/title/{{ $ctrl.movie.imdb_id}}" target="_blank">Need more info?</a>
+        </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+</div>
+</div>

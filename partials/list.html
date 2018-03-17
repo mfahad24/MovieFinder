@@ -1,0 +1,24 @@
+<!-- Displays laterList movie object array from list service
+ -->
+ <div class="whitebox posterlist">
+
+<ol id="savedlist">
+  <li ng-repeat="movie in $ctrl.movies | filter: search track by $index">
+    <p class="movietitle" ng-click="$ctrl.checkDetails(movie)">{{ movie.title }}</p>
+    <i class="material-icons xOut" ng-click="$ctrl.deleteFromList($index)">
+    <img class="desktop-list-poster" ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ movie.poster_path }}">
+      <i class="material-icons"> highlight_off</i>
+    </i>
+  </li>
+</ol>
+
+</div>
+
+<div class="posterwall desktoplist">
+  <div class="listposter" ng-repeat="movie in $ctrl.movies | filter: search track by $index">
+
+    <img ng-click="$ctrl.checkDetails(movie)" class="desktop-list-poster" ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ movie.poster_path }}">
+    <!-- <p ng-click="$ctrl.checkDetails(movie)">{{ movie.title}}</p> -->
+    <i class="material-icons xOut" ng-click="$ctrl.deleteFromList($index)">highlight_off</i>
+  </div>
+<div>

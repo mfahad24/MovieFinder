@@ -1,0 +1,39 @@
+<!-- This partial displays the properties from the returned API objects-->
+<div class="selectBox">
+  <div class="whitebox mobile">
+    <div class="select fade">
+
+      <div class="movie-container">
+        <div class="relative">
+        <div class="movie absolute" ng-class="{'animated bounceOutLeft' : movie.swipedLeft, 'animated bounceOutRight' : movie.swipedRight}" ng-repeat="movie in $ctrl.movies" ng-style="{'z-index' : $index * -1 }">
+          <div class="relative">
+
+            <img class="border-radius poster" md-swipe-right="$ctrl.swipeRight()" md-swipe-left="$ctrl.nextMovie()" ng-src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ movie.poster_path }}">
+            <div class="absolute titlediv">
+              <p class="movieTitle"> {{ movie.title }} </p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="non-movie-container">
+        <div class="info-container">
+          <p class="desktopTitle"> {{ $ctrl.movies[0].title }} ({{ $ctrl.movies[0].release_date.slice(0,4) }})</p>
+          <p class="selectoverview"> {{ $ctrl.movies[0].overview }}</p>
+        </div>
+
+        <div class="selector-container">
+          <div ng-click="$ctrl.nextMovie()" class="selectors thumb-down">
+            <i class="material-icons">thumb_down</i>
+          </div>
+          <div ng-click="$ctrl.saveToList()" class="selectors watch-later">
+            <i class="material-icons">watch_later</i>
+          </div>
+          <div ng-click="$ctrl.swipeRight()" class="selectors watch-now">
+            <i class="material-icons">thumb_up</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

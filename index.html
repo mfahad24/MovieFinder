@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="node_modules/angular-material/angular-material.css"/>
+  <link rel="stylesheet" type="text/css" href="bower_components/angular-input-stars-directive/angular-input-stars.css" />
+  <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/angularjs-slider/dist/rzslider.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Federo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+  <div id="desktopnav">
+      <img id="logo" src="images/swipelogo.png">
+    <div class="nav">
+      <ul>
+        <a class="navlinks" href="#!/form">Search</a>
+        <a class="navlinks" href="#!/select">Swipe</a>
+        <a class="navlinks" href="#!/list">Saved List</a>
+        <a class="navlinks" href="#!/welcome">Login</a>
+      </ul>
+    </div>
+  </div>
+  <ng-view></ng-view>
+  <div id="bottomNav">
+    <div id="buttons">
+
+      <a href="#!/form">
+        <i class="material-icons navbuttons highlight">search</i>
+      </a>
+      <a href="#!/select" ng-if="fadeIn=true">
+        <i class="material-icons navbuttons highlight">local_movies</i>
+      </a>
+      <a href="#!/list">
+        <i class="material-icons navbuttons highlight">list</i>
+      </a>
+      <a href="#!/welcome">
+        <i class="material-icons navbuttons highlight">account_box</i>
+      </a>
+
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.min.js"></script>
+  <script src="bower_components/angular-input-stars-directive/angular-input-stars.js"></script>
+  <script src="bower_components/angularjs-slider/dist/rzslider.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.js"></script>
+  <script src="node_modules/angular-material/angular-material.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script src="module.js"></script>
+  <script src="components/formComponent.js"></script>
+  <script src="components/selectComponent.js"></script>
+  <script src="components/listComponent.js"></script>
+  <script src="components/watchComponent.js"></script>
+<script src="components/welcomeComponent.js"></script>
+  <script src="services/ListService.js"></script>
+  <script src="services/DetailService.js"></script>
+  <script src="services/MovieService.js"></script>
+  <script src="Directives/MovieDirective.js"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
